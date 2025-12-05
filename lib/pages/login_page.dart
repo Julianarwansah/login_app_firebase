@@ -84,6 +84,14 @@ class _MyLoginState extends State<MyLogin> {
               ),
               obscureText: true,
             ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: _login,
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(double.infinity, 50),
+              ),
+              child: const Text('Login'),
+            ),
           ],
         ),
       ),
