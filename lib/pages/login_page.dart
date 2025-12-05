@@ -16,6 +16,9 @@ class _MyLoginState extends State<MyLogin> {
   bool _isLoading = false;
   String? _error;
 
+  /// Process login with Firebase Authentication
+  /// Shows success dialog on successful login
+  /// Handles errors by updating _error state
   Future<void> _login() async {
     if (!_formKey.currentState!.validate()) return;
 
@@ -49,6 +52,7 @@ class _MyLoginState extends State<MyLogin> {
     }
   }
 
+  /// Displays a dialog showing the user's UID and email
   void _showSuccessDialog(User? user) {
     showDialog(
       context: context,
