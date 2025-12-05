@@ -10,6 +10,9 @@ class MyLogin extends StatefulWidget {
 class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: const Text('Login'), centerTitle: true),
+      body: Container(),
+    );
   }
 }
