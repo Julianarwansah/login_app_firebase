@@ -75,6 +75,15 @@ class _MyLoginState extends State<MyLogin> {
               ),
               keyboardType: TextInputType.emailAddress,
             ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: passCtrl,
+              decoration: const InputDecoration(
+                labelText: 'Password',
+                border: OutlineInputBorder(),
+              ),
+              obscureText: true,
+            ),
           ],
         ),
       ),
