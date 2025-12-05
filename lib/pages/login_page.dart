@@ -8,6 +8,9 @@ class MyLogin extends StatefulWidget {
 }
 
 class _MyLoginState extends State<MyLogin> {
+  final emailCtrl = TextEditingController();
+  final passCtrl = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
