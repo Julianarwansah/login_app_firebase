@@ -94,6 +94,15 @@ class _MyLoginState extends State<MyLogin> {
                   ? const CircularProgressIndicator(color: Colors.white)
                   : const Text('Login'),
             ),
+            if (_error != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text(
+                  _error!,
+                  style: const TextStyle(color: Colors.red),
+                  textAlign: TextAlign.center,
+                ),
+              ),
           ],
         ),
       ),
