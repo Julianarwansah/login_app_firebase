@@ -50,18 +50,18 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC1ss-JyB3L6mn30GOS5rl3Jo3kKSkcs_4',
-    appId: '1:1007931029306:web:0ab039227351641ac64203',
-    messagingSenderId: '1007931029306',
+    apiKey: 'AIzaSyBIS1_MGp4jkiQPK1MuWbSqoqXVKadeN2Q',
+    appId: "1:1007931029306:web:baafd70f53df6f7bc64203",
+    messagingSenderId: "1007931029306",
     projectId: 'app-login-firebase-7fd18',
     authDomain: 'app-login-firebase-7fd18.firebaseapp.com',
     storageBucket: 'app-login-firebase-7fd18.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC1ss-JyB3L6mn30GOS5rl3Jo3kKSkcs_4',
-    appId: '1:1007931029306:android:0ab039227351641ac64203',
-    messagingSenderId: '1007931029306',
+    apiKey: 'AIzaSyBIS1_MGp4jkiQPK1MuWbSqoqXVKadeN2Q',
+    appId: "1:1007931029306:web:baafd70f53df6f7bc64203",
+    messagingSenderId: "1007931029306",
     projectId: 'app-login-firebase-7fd18',
     storageBucket: 'app-login-firebase-7fd18.firebasestorage.app',
   );
