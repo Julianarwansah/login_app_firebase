@@ -33,19 +33,7 @@ class _MyLoginState extends State<MyLogin> {
 
       if (!mounted) return;
 
-      showDialog(
-        context: context,
-        builder: (_) => AlertDialog(
-          title: const Text('Login Success'),
-          content: Text('UID: ${user?.uid}\nEmail: ${user?.email}'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
-      );
+      _showSuccessDialog(user);
     } on FirebaseAuthException catch (e) {
       setState(() {
         _error = e.message;
@@ -59,6 +47,22 @@ class _MyLoginState extends State<MyLogin> {
         _isLoading = false;
       });
     }
+  }
+
+  void _showSuccessDialog(User? user) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text('Login Success'),
+        content: Text('UID: ${user?.uid}\nEmail: ${user?.email}'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
