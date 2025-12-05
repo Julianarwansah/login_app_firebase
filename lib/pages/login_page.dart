@@ -86,11 +86,13 @@ class _MyLoginState extends State<MyLogin> {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: _login,
+              onPressed: _isLoading ? null : _login,
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
               ),
-              child: const Text('Login'),
+              child: _isLoading
+                  ? const CircularProgressIndicator(color: Colors.white)
+                  : const Text('Login'),
             ),
           ],
         ),
