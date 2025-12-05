@@ -79,6 +79,7 @@ class _MyLoginState extends State<MyLogin> {
                     decoration: const InputDecoration(
                       labelText: 'Email',
                       border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.email),
                     ),
                     keyboardType: TextInputType.emailAddress,
                     validator: (value) {
@@ -94,6 +95,7 @@ class _MyLoginState extends State<MyLogin> {
                     decoration: const InputDecoration(
                       labelText: 'Password',
                       border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.lock),
                     ),
                     obscureText: true,
                     validator: (value) {
@@ -111,6 +113,9 @@ class _MyLoginState extends State<MyLogin> {
                     onPressed: _isLoading ? null : _login,
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 50),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                     child: _isLoading
                         ? const CircularProgressIndicator(color: Colors.white)
